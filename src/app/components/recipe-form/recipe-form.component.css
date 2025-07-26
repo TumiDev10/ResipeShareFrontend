@@ -1,0 +1,19 @@
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+}
+label {
+  margin-bottom: 1rem;
+}
+input,
+textarea {
+  padding: 0.5rem;
+  font-size: 1rem;
+  width: 100%;
+}
+button {
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
