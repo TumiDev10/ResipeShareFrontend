@@ -1,27 +1,22 @@
----
-## ✅ FRONTEND: `README.md` (for the `recipe-share-ui` Angular folder)
-```markdown
-# 🧑‍🍳 RecipeShare Frontend (Angular)
+# RecipeShare Frontend
 ## Overview
-This is the frontend UI for RecipeShare, built using **Angular 17** with standalone components. It provides a clean and responsive interface to interact with the RecipeShare API, including viewing, creating, editing, and deleting recipes.
+This is the frontend for the RecipeShare application built with **Angular 16+** and **standalone components**. It communicates with the ASP.NET Core backend to perform recipe operations and provides a clean, responsive user interface.
 ---
 ## Features
-- 📋 List all recipes
-- ➕ Add new recipes
-- 🖊️ Edit existing recipes
-- ❌ Delete recipes
-- 🔍 Live search by dietary tag
-- ✅ Form validation with error feedback
-- 💄 Professional card layout
-- 🔁 Back navigation from forms
-- 📱 Responsive and modern styling
+- Standalone Angular components
+- View all recipes as responsive cards
+- Create, edit, and delete recipes
+- Filter/search recipes by dietary tag
+- Reactive form with validation
+- Professional and clean styling
 ---
 ## Getting Started
 ### Prerequisites
-- [Node.js](https://nodejs.org/)
-- [Angular CLI](https://angular.io/cli)
+- Node.js v16+
+- Angular CLI installed globally
+- 
 ### Setup Instructions
-1. Navigate to the UI folder:
+1. **Navigate to the frontend:**
    ```bash
    cd recipe-share-ui
    ```
@@ -69,9 +64,6 @@ recipe-share-ui/
 ## Notes
 - Ensure the backend is running and accessible before starting the frontend.
 - Make sure port configurations don't conflict with other services.
----
-## License
-MIT License
 ---
 ## Author
 RecipeShare Frontend — Developed by Tumi Mashigo
