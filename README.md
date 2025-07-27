@@ -1,31 +1,77 @@
-<<<<<<< HEAD
-# ResipeShareFrontend
-=======
-# RecipeShareUi
+---
+## ✅ FRONTEND: `README.md` (for the `recipe-share-ui` Angular folder)
+```markdown
+# 🧑‍🍳 RecipeShare Frontend (Angular)
+## Overview
+This is the frontend UI for RecipeShare, built using **Angular 17** with standalone components. It provides a clean and responsive interface to interact with the RecipeShare API, including viewing, creating, editing, and deleting recipes.
+---
+## Features
+- 📋 List all recipes
+- ➕ Add new recipes
+- 🖊️ Edit existing recipes
+- ❌ Delete recipes
+- 🔍 Live search by dietary tag
+- ✅ Form validation with error feedback
+- 💄 Professional card layout
+- 🔁 Back navigation from forms
+- 📱 Responsive and modern styling
+---
+## Getting Started
+### Prerequisites
+- [Node.js](https://nodejs.org/)
+- [Angular CLI](https://angular.io/cli)
+### Setup Instructions
+1. Navigate to the UI folder:
+   ```bash
+   cd recipe-share-ui
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Start the development server:
+   ```bash
+   ng serve
+   ```
+> 🌐 The app will be available at: `http://localhost:4200`
+---
+## Project Structure
+recipe-share-ui/
+├── src/
+│   ├── app/
+│   │   ├── components/        # List, Form, Search components
+│   │   ├── services/          # HTTP service
+│   │   ├── models/            # Recipe model
+│   │   └── app.config.ts      # API base URL
+│   ├── styles.css             # Global styles
+│   └── index.html             # Entry pointrecipe-share-ui/
+├── src/
+│   ├── app/
+│   │   ├── components/        # List, Form, Search components
+│   │   ├── services/          # HTTP service
+│   │   ├── models/            # Recipe model
+│   │   └── app.config.ts      # API base URL
+│   ├── styles.css             # Global styles
+│   └── index.html             # Entry point
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.4.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
->>>>>>> d382cac (initial commit)
+---
+## Styling & UI
+- 🧾 Recipes displayed as modern cards
+- 📦 "Add Recipe" button is fixed at the top-right
+- 🧭 Edit and Delete buttons are pinned to the bottom of each card
+- 🖼️ Forms are center-aligned with labels and validation hints
+- 🔙 Back buttons included in add/edit views for easy navigation
+---
+## API Integration
+- All data is pulled from the backend at `https://localhost:5000/api/recipes`
+- CORS must be enabled in the backend for local development
+---
+## Notes
+- Ensure the backend is running and accessible before starting the frontend.
+- Make sure port configurations don't conflict with other services.
+---
+## License
+MIT License
+---
+## Author
+RecipeShare Frontend — Developed by Tumi Mashigo
