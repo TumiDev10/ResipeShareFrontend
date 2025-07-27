@@ -1,36 +1,20 @@
-<div class="container">
-    <div class="search-bar">
-    <input
-    
-          type="text"
-    
-          [(ngModel)]="searchInput"
-    
-          (input)="searchByTag(searchInput)"
-    
-          placeholder="🔍 Search by tag (e.g., pasta, chicken)"
-    
-        />
+<div class="recipe-list-container">
+  <button class="add-button" (click)="goToAddForm()">+ Add New Recipe</button>
+  <div class="card" *ngFor="let recipe of recipes">
+    <div class="card-content">
+      <h3 class="card-title">{{ recipe.title }}</h3>
+      <p><strong>Dietary Tag:</strong> {{ recipe.dietaryTags }}</p>
+      <p><strong>Ingredients:</strong> {{ recipe.ingredients }}</p>
+      <p><strong>Steps:</strong> {{ recipe.steps }}</p>
+      <p>
+        <strong>Cooking Time:</strong> {{ recipe.cookingTimeInMinutes }} minutes
+      </p>
     </div>
-    <div class="card-grid">
-    <div class="card" *ngFor="let recipe of recipes">
-    <div class="card-header">
-    <h2>{{ recipe.title }}</h2>
-    <span class="badge">{{ recipe.cookingTimeInMinutes }} mins</span>
+    <div class="card-actions">
+      <button class="edit-button" (click)="editRecipe(recipe.id)">Edit</button>
+      <button class="delete-button" (click)="deleteRecipe(recipe.id)">
+        Delete
+      </button>
     </div>
-    <h2>Ingredients</h2>
-    <p>{{ recipe.ingredients }}</p>
-
-    <h2>Steps</h2>
-    <p>{{ recipe.steps }}</p>
-    
-    <h2>Dietary Tag</h2>
-    <p>{{ recipe.dietaryTags }}</p>
-    <div class="actions">
-    <a [routerLink]="['/edit', recipe.id]" class="btn edit">✏️ Edit</a>
-    <a [routerLink]="['/delete/{recipe.id}',  recipe.id]" class="btn view" (click)="deleteRecipe(recipe.id)">🗑️ Delete</a>
-    </div>
-    </div>
-    </div>
-    </div>
-     
+  </div>
+</div>

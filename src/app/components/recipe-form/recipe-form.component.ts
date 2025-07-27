@@ -45,6 +45,11 @@ export class RecipeFormComponent implements OnInit {
       });
     }
   }
+
+  goBack(): void {
+    this.router.navigate(['/recipes']);
+  }
+
   onSubmit(): void {
     if (this.form.invalid) return;
     const recipe: Recipe = this.form.value;

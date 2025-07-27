@@ -1,64 +1,49 @@
+<div class="back-button-container">
+    <button class="back-recipe-button" (click)="goBack()">← Back</button>
+    </div>
 <div class="form-container">
-  <h2>{{ isEditMode ? "Edit Recipe" : "Add New Recipe" }}</h2>
-  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    
+    <h2>{{ isEditMode ? 'Edit Recipe' : 'Add New Recipe' }}</h2>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <!-- Title -->
     <div class="form-group">
-      <label for="title">Title</label>
-      <input id="title" type="text" formControlName="title" required />
-      <div
-        *ngIf="form.get('title')?.invalid && form.get('title')?.touched"
-        class="error"
-      >
-        Title is required.
-      </div>
+    <label for="title">Title</label>
+    <input id="title" type="text" formControlName="title" placeholder="e.g. Grilled Chicken" />
+    <div class="error" *ngIf="form.get('title')?.invalid && form.get('title')?.touched">
+           Title is required.
     </div>
+    </div>
+    <!-- Dietary Tags -->
     <div class="form-group">
-      <label for="dietaryTags">dietaryTags</label>
-      <textarea id="dietaryTags" formControlName="dietaryTags"></textarea>
+    <label for="dietaryTags">Dietary Tags</label>
+    <textarea id="dietaryTags" formControlName="dietaryTags" placeholder="e.g. gluten-free, vegan"></textarea>
     </div>
+    <!-- Ingredients -->
     <div class="form-group">
-      <label for="ingredients">Ingredients</label>
-      <textarea
-        id="ingredients"
-        formControlName="ingredients"
-        required
-      ></textarea>
-      <div
-        *ngIf="
-          form.get('ingredients')?.invalid && form.get('ingredients')?.touched
-        "
-        class="error"
-      >
-        Ingredients are required.
-      </div>
+    <label for="ingredients">Ingredients</label>
+    <textarea id="ingredients" formControlName="ingredients" placeholder="List all ingredients" required></textarea>
+    <div class="error" *ngIf="form.get('ingredients')?.invalid && form.get('ingredients')?.touched">
+           Ingredients are required.
     </div>
+    </div>
+    <!-- Instructions -->
     <div class="form-group">
-      <label for="instructions">Steps</label>
-      <textarea id="steps" formControlName="steps" required></textarea>
-      <div
-        *ngIf="
-          form.get('instructions')?.invalid && form.get('instructions')?.touched
-        "
-        class="error"
-      >
-        Steps are required.
-      </div>
+    <label for="instructions">Steps</label>
+    <textarea id="instructions" formControlName="steps" placeholder="Step-by-step cooking instructions" required></textarea>
+    <div class="error" *ngIf="form.get('steps')?.invalid && form.get('steps')?.touched">
+           Steps are required.
     </div>
+    </div>
+    <!-- Cooking Time -->
     <div class="form-group">
-      <div>
-        <label>
-          Cooking Time (minutes):
-          <input
-            id="cookingTimeInMinutes"
-            type="number"
-            formControlName="cookingTimeInMinutes"
-            min="1"
-            required
-          />
-        </label>
-      </div>
+    <label for="cookingTimeInMinutes">Cooking Time (minutes)</label>
+    <input id="cookingTimeInMinutes" type="number" formControlName="cookingTimeInMinutes" min="1" placeholder="e.g. 45" />
     </div>
+    <!-- Submit -->
+    <div class="form-actions">
     <button type="submit" [disabled]="form.invalid">
-      {{ isEditMode ? "Update" : "Create" }}
+           {{ isEditMode ? 'Update Recipe' : 'Create Recipe' }}
     </button>
-  </form>
-</div>
+    </div>
+    </form>
+    </div>
